@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
-<title>Web Design | Custom Websites & Web Apps | JD Digital Web</title>
-<meta name="description" content="Professional web design. Modern websites, fast delivery and SEO-focused development with a clear conversion strategy. Next.js, React, TypeScript."/>
+<meta http-equiv="X-Content-Type-Options" content="nosniff"/>
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin"/>
+<title>JD Digital Web | Website Design & Development — Mumbai</title>
+<meta name="description" content="JD Digital Web — a Mumbai-based web design & development agency. We build fast, SEO-optimised, mobile-first websites that help your business grow."/>
+<meta name="robots" content="index, follow"/>
+<meta property="og:title" content="JD Digital Web | Website Design & Development"/>
+<meta property="og:description" content="Fast, clean, conversion-focused websites built for businesses in Mumbai and beyond."/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
@@ -129,7 +136,7 @@ img{max-width:100%;display:block}
 }
 .hero-h1 .underline-wrap{
   position:relative;
-  display:inline;
+  display:inline-block;
 }
 .hero-h1 .underline-wrap::after{
   content:'';
@@ -689,10 +696,10 @@ details.faq2[open] .faq2-icon{
   .portfolio-grid{grid-template-columns:1fr 1fr}
   .results-layout,.results-bottom-row{grid-template-columns:1fr}
   .about-layout{grid-template-columns:1fr}
-  .mw-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr}
   .bento-4{grid-template-columns:1fr 1fr}
-  .exp-stats{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .faq2-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
   .nav-center{display:none}
@@ -700,23 +707,45 @@ details.faq2[open] .faq2-icon{
   .nav-btn,.nav-lang{display:none}
   .nav-hamburger{display:flex !important}
   .page{width:calc(100% - 24px)}
-  .card{padding:20px;border-radius:var(--radius-lg)}
+  .card{padding:20px 18px;border-radius:var(--radius-lg)}
   .portfolio-grid{grid-template-columns:1fr}
-  .exp-services{grid-template-columns:1fr}
-  .about-layout{grid-template-columns:1fr}
-  .faq-side{flex-direction:column}
-  .dark-strip{padding:36px 24px}
-  .footer-grid{padding:20px}
-  .card-title{font-size:1.8rem}
+  .svc-grid{grid-template-columns:1fr 1fr}
   .bento-4{grid-template-columns:1fr 1fr}
+  .results-layout{grid-template-columns:1fr}
+  .results-features{grid-template-columns:1fr 1fr}
+  .faq2-grid{grid-template-columns:1fr}
+  .dark-strip{padding:36px 24px}
+  .footer-grid{grid-template-columns:1fr;padding:0}
+  .card-title{font-size:1.8rem}
+  .hero-avail-pill{font-size:.72rem;padding:6px 14px}
+  /* underline fix - contain within heading on all screen widths */
+  .hero-h1 .underline-wrap{display:block}
+  .hero-h1 .underline-wrap::after{bottom:-4px;height:3px}
 }
 @media(max-width:480px){
-  .hero{padding:120px 20px 60px;overflow:hidden}
-  .hero-h1{font-size:1.85rem;letter-spacing:-.025em}
-  .hero-h1 .underline-wrap{white-space:normal}
+  .hero{padding:110px 16px 60px;overflow:hidden}
+  .hero-h1{font-size:clamp(1.6rem,7vw,2rem);letter-spacing:-.025em;line-height:1.15}
+  .hero-h1 .underline-wrap{display:block;white-space:normal}
+  .hero-sub{font-size:.9rem;margin-bottom:32px}
+  .sparkle-btn{padding:12px 22px;font-size:.85rem}
   .strip-btns{flex-direction:column;align-items:center}
   .bento-4{grid-template-columns:1fr 1fr}
-  .exp-stats{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .stats-strip{grid-template-columns:1fr 1fr}
+  .stats-num{font-size:1.6rem}
+  .card-title{font-size:1.6rem}
+  .results-features{grid-template-columns:1fr}
+  .faq2-grid{grid-template-columns:1fr}
+  .footer-title{font-size:1.8rem}
+  .nav-wrap{top:10px;left:10px;right:10px}
+  .dark-strip{padding:32px 18px}
+  .dark-strip h2{font-size:1.5rem}
+}
+@media(max-width:360px){
+  .hero-h1{font-size:1.5rem}
+  .bento-4{grid-template-columns:1fr}
+  .stats-strip{grid-template-columns:1fr 1fr}
+  .card{padding:16px 14px}
 }
 
 /* MOBILE MENU */
@@ -750,7 +779,7 @@ details.faq2[open] .faq2-icon{
       <a href="#faq">FAQ</a>
     </div>
     <div class="nav-right">
-      <a href="https://wa.me/917984165826?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="nav-btn">Get a Quote</a>
+      <a href="https://wa.me/917984165826?text=Hi%2C%20I%20am%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="nav-btn">Get a Quote</a>
       <button class="nav-hamburger" onclick="document.getElementById('mobMenu').classList.add('open')" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -771,7 +800,7 @@ details.faq2[open] .faq2-icon{
     <a href="#reviews" onclick="document.getElementById('mobMenu').classList.remove('open')">Testimonials</a>
     <a href="#faq" onclick="document.getElementById('mobMenu').classList.remove('open')">FAQ</a>
   </nav>
-  <a href="https://wa.me/917984165826?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="mob-cta" onclick="document.getElementById('mobMenu').classList.remove('open')">Get a Quote →</a>
+  <a href="https://wa.me/917984165826?text=Hi%2C%20I%20am%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="mob-cta" onclick="document.getElementById('mobMenu').classList.remove('open')">Get a Quote →</a>
 </div>
 
 <!-- HERO -->
@@ -796,7 +825,7 @@ details.faq2[open] .faq2-icon{
       Focused on speed, strategy, and building high-performing websites that turn visitors into customers and support long-term business growth.
     </p>
     <div class="hero-cta-wrap">
-      <a href="https://wa.me/917984165826?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="sparkle-btn">
+      <a href="https://wa.me/917984165826?text=Hi%2C%20I%20am%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="sparkle-btn">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
         Bring Your Vision Online
       </a>
@@ -947,7 +976,7 @@ details.faq2[open] .faq2-icon{
     <h2>Ready to bring your <span class="accent-word">vision online?</span></h2>
     <p>Let's build something that works as hard as you do — clean design, fast delivery, and a website your customers will trust from day one.</p>
     <div class="strip-btns">
-      <a href="https://wa.me/917984165826?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="strip-btn-w">
+      <a href="https://wa.me/917984165826?text=Hi%2C%20I%20am%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="strip-btn-w">
         Start a Project →
       </a>
       <a href="#faq" class="strip-btn-g">See how it works</a>
@@ -1117,7 +1146,7 @@ details.faq2[open] .faq2-icon{
           <h2 class="footer-title">Ready for your project?</h2>
           <p class="footer-sub">Let's get started together. Send us a request and receive a response within 12 hours.</p>
           <div class="footer-actions">
-            <a href="https://wa.me/917984165826?text=Hi%2C%20I%27m%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="footer-btn-w">
+            <a href="https://wa.me/917984165826?text=Hi%2C%20I%20am%20interested%20in%20getting%20a%20website%20built.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="footer-btn-w">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/></svg>
               START PROJECT
             </a>
@@ -1143,7 +1172,7 @@ details.faq2[open] .faq2-icon{
           <div class="footer-address-label">Phone</div>
           <div class="footer-address-text">+91 79841 65826</div>
         </a>
-        <div style="padding:16px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;cursor:pointer;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(255,255,255,.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'" onclick="window.location='mai'+'lto:'+'jddigitalweb'+'@'+'gmail.com'">
+        <div style="padding:16px 20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;cursor:pointer;transition:border-color .2s" onmouseover="this.style.borderColor='rgba(255,255,255,.2)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)'" onclick="window.location='mailto:jddigitalweb@gmail.com'">
           <div class="footer-address-label">Email</div>
           <div class="footer-address-text">jddigitalweb&#64;gmail&#46;com</div>
         </div>
